@@ -6,6 +6,9 @@ global_asm!(include_str!("aarch64/addition.s"));
 #[cfg(target_arch = "arm")]
 global_asm!(include_str!("armv6/addition.s"));
 
+#[cfg(target_arch = "riscv64")]
+global_asm!(include_str!("riscv/addition.s"));
+
 extern "C" {
     fn add_numbers(a: i32, b: i32) -> i32;
 }
